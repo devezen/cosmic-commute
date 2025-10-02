@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { StarfieldWrapper } from "@/components/starfield-wrapper"
 import { Navbar } from "@/components/navbar"
@@ -28,7 +27,6 @@ export default function RootLayout({
           <Navbar />
           <Suspense fallback={null}>{children}</Suspense>
         </AuthProvider>
-        <Analytics />
       </body>
     </html>
   )
